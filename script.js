@@ -33,21 +33,21 @@ document.getElementById('result').innerHTML = (randomArr);
 var numero;
 
 //creo un ciclo for per stampare i 5 prompt
-for(let i = 0; i < 5; i++) {
-  setTimeout(function () {
-    
-    numero = parseInt(prompt("inserisci un numero"));
-  }, 3000);
+setTimeout(function () {
+    for(let i = 0; i < 5; i++) {
+        numero = parseInt(prompt("inserisci un numero"));
 
-    if (numero == randomArr[r]) {
+        //confronto i prompt con i numeri stampati
+        if (randomArr.includes(numero)) {
 
-        console.log("bravo hai indovinato");
+            console.log("bravo hai indovinato");
 
-    } else {
+        } else {
 
-        console.log("mi dispiace, ritenta");
-    }
+            console.log("mi dispiace, ritenta");
+        }
+    }    
+}, 3000);
 
-}
-//confronto i prompt con i numeri stampati
+
 
