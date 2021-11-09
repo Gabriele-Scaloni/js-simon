@@ -39,7 +39,7 @@ for(let i = 0; i < 5; i++) {
     numero = parseInt(prompt("inserisci un numero"));
   }, 3000);
 
-    if (numero === randomArr[r]) {
+    if (numero == randomArr[r]) {
 
         console.log("bravo hai indovinato");
 
