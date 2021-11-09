@@ -14,20 +14,40 @@ Prompt non lo userete poi lavorando effettivamente. (o perlomeno ce lo auguriamo
 
 
 //creo  5 numeri casuali da 1 a 100
+
+/* altro modo per stampare 5 numeri casuali 
 var randomArr = Array.apply(null, Array(5)).map(function(item, index){
     return Math.floor(Math.random() * 100)
-});
+}); */
 
+var randomArr = [];
+while(randomArr.length < 5){
+    var r = Math.floor(Math.random() * 100) + 1;
+    if(randomArr.indexOf(r) === -1) randomArr.push(r);
+}
+
+console.log(randomArr);
 //stampo i numeri nell'html
 document.getElementById('result').innerHTML = (randomArr);
-console.log(randomArr);
+
+var numero;
 
 //creo un ciclo for per stampare i 5 prompt
 for(let i = 0; i < 5; i++) {
   setTimeout(function () {
-
-    let quest = parseInt(prompt("inserisci un numero"));
+    
+    numero = parseInt(prompt("inserisci un numero"));
   }, 3000);
+
+    if (numero === randomArr[r]) {
+
+        console.log("bravo hai indovinato");
+
+    } else {
+
+        console.log("mi dispiace, ritenta");
+    }
 
 }
 //confronto i prompt con i numeri stampati
+
